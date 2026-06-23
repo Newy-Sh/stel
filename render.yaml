@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: stellaris-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot-improved.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: TICKET_CATEGORY_ID
+        sync: false
+      - key: SUPORTE_ROLE_ID
+        sync: false
+    plan: free
